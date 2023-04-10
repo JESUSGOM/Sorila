@@ -27,7 +27,18 @@ class UsuarioController extends Controller
 
     public function buscoDni($dni){
         $usuario = Usuario::find($dni);
-        
+
         return view('consultarUsuario',['usuDni'=>$dni]);
+    }
+
+    public function buscar($id)
+    {
+        $usuario = Usuario::where('UsuDni','=',$id)->get();
+        return view('usuarios2',['usuarios'=>$usuario]);
+    }
+
+    public function show($id)
+    {
+
     }
 }

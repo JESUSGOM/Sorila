@@ -14,11 +14,11 @@ class Usuario extends Model
 
     public function obtenerUsuarios()
     {
-        $todosLosUsuarios = Usuarios::get()->toArray();
+        $todosLosUsuarios = Usuario::get()->toArray();
     }
 
-    public function buscarUsuario($dni)
+    /**public function buscarUsuario($dni)
     {
         $usuarioEncontrado = Usuarios::get()->
-    }
+    }*/
 }

@@ -2,23 +2,19 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
-use App\Models\Teoefonos;
+use App\Models\Telefono;
 
 class TelefonoController extends Controller
 {
-    public function index(){
-        $telefono = Telefono::all();
-        return view('telefono',['Telefonos'=>$telefono]);
-    }
-
-    public function storeTelefono(Request $request)
+    public function index()
     {
-        $telefono = new Telefono;
+        $telefonos = Telefono::all();
+        return view('telefono',['telefonos'=>$telefonos]);
     }
 
-    public function view($telid){
-        $telefono = Telefonos::find($telid);
 
-    }
+
+
 }

@@ -10,9 +10,9 @@ class Telefono extends Model
     use HasFactory;
     protected $table = "Telefonos";
     protected $primaryKey = "TelId";
-    public $incrementing = true;
 
-    public function obtenerTelefonos(){
-        $todosLosTelefonos = Telefonos::get()->toArray();
+    public function obtenerTelefonos()
+    {
+        $todosLosTelefonos = Telefono::get()->toArray();
     }
 }
